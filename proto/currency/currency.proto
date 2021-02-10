@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package currency;
+
+service Currency {
+  rpc GetCurrency(GetCurrencyRequest) returns (GetCurrencyResponse);
+}
+
+message GetCurrencyRequest {
+  string Base = 1;
+  string Destination = 2;
+}
+
+message GetCurrencyResponse {
+  float Rate = 1;
+}
